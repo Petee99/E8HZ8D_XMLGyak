@@ -1,0 +1,103 @@
+<?xml version="1.0"? encoding="utf-8">
+<orarend>
+    <ora id="alg_vizsg_e" tipus="Elmelet">
+        <targy>
+            Algoritmusok es vizsgalatuk
+        </targy>
+        <idopont>
+            <nap>
+                Hetfo
+            </nap>
+            <tol>
+                8.00
+            </tol>
+            <ig>
+                10.00
+            </ig>
+        </idopont>
+        <helyszin>
+            A3/313
+        </helyszin>
+        <oktato>
+            Hazy Attila
+        </oktato>
+        <szak>
+            Programtervezo informatikus
+        </szak>
+    </ora>
+    <ora id="alg_vizsg_gy" tipus="Gyakorlat">
+        <targy>
+            Algoritmusok es vizsgalatuk
+        </targy>
+        <idopont>
+            <nap>
+                Hetfo
+            </nap>
+            <tol>
+                10.00
+            </tol>
+            <ig>
+                12.00
+            </ig>
+        </idopont>
+        <helyszin>
+            A3/313
+        </helyszin>
+        <oktato>
+            Hazy Attila
+        </oktato>
+        <szak>
+            Programtervezo informatikus
+        </szak>
+    </ora> 
+    <ora id="xml_e" tipus="Elmelet">
+        <targy>
+            Adatkezeles XMLben
+        </targy>
+        <idopont>
+            <nap>
+                Kedd
+            </nap>
+            <tol>
+                12.00
+            </tol>
+            <ig>
+                14.00
+            </ig>
+        </idopont>
+        <helyszin>
+            A2 I fsz.
+        </helyszin>
+        <oktato>
+            Bednarik Laszlo
+        </oktato>
+        <szak>
+            Programtervezo informatikus
+        </szak>
+    </ora>
+    <ora id="xml_gy" tipus="Gyakorlat">
+        <targy>
+            Adatkezeles XMLben
+        </targy>
+        <idopont>
+            <nap>
+                Kedd
+            </nap>
+            <tol>
+                14.00
+            </tol>
+            <ig>
+                16.00
+            </ig> 
+        </idopont>
+        <helyszin>
+            Info 103
+        </helyszin>
+        <oktato>
+            Bednarik Laszlo
+        </oktato>
+        <szak>
+            Programtervezo informatikus
+        </szak>
+    </ora>
+</orarend>
