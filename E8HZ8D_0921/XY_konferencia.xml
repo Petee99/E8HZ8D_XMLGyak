@@ -1,0 +1,17 @@
+<?xml version="1.0"? encoding="utf-8">
+<konferencia>
+    <cim id="txn_nxm_2jb" cim="News on XML"/>
+    <hallgatok>
+        <hallgato id="ll9_4xm_2jb">
+            <nev id="uff_4xm_2jb" nev="Toth Adam"/>
+            <lakcim id="ufg_4xm_2jb" cim="3529 Nagy Lajos utac 12."/>
+        </hallgato> 
+    </hallgatok>
+    <helyszin id="nzk_4xm_2jb" nev="Zoom" />
+    <eloado id="sad_4xm_2jb">
+        <nev id="u5q_4xm_2jb" nev="Nagy Zoltan"/>
+        <adoszam id="u5t_4xm_2jb" szam="887145324"/>
+        <lakcim id="u5s_4xm_2jb" cim="3535 Jozsef A. ut 18."/>
+    </eloado>
+    <datum id="lk9_4xm_2jb" datum="2021.09.25"/>
+</konferencia>
