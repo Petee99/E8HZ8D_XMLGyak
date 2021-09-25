@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<link rel="stylesheet" href="style.css">
+
+<body>
+<h2>Makó Péter - E8HZ8D</h2>
+
+<form action="form.php" method="POST">
+  <label for="name">Név:</label>
+  <input type="text" id="name" name="name" placeholder="Írd be a neved"><br>
+  <label for="pin">PIN Kód:</label>
+  <input type="text" id="pin" name="pin" placeholder="Írd be a PIN kódod"><br>
+  <label for="fruits">Kedvenc gyümölcs:</label>
+  <input type="text" id="fruit" name="fruit" placeholder="Írd be a kedvenc gyümölcsöd"><br>
+  <label for="age">Életkor:</label>
+  <input type="number" min="0" id="age" name="age" placeholder="Írd be az életkorod"><br>
+  <label for="fsize">Lábméret:</label>
+  <input type="number" min="0" id="fsize" name="fsize" placeholder="Írd be a lábméreted"><br>
+  <label for="confidence">Önbizalom:</label>
+  <input type="range" min="0" max="100" id="confidence" name="confidence" value="50" class="slider">
+  <label id="value"></label>
+  <br>
+  
+  <input type="submit" value="Elküldöm">
+  <input type="submit" value="Elküldöm ellenőrzés nélkül">
+</form> 
+
+<script>
+var slider = document.getElementById("confidence");
+var output = document.getElementById("value");
+output.innerHTML = slider.value; // Display the default slider value
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>    
+
+</body>
+</html>
+
