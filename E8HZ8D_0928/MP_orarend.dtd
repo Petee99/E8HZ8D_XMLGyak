@@ -1,0 +1,12 @@
+<!ELEMENT orarend (ora+)>
+<!ELEMENT ora (targy,idopont,helyszin,oktato,szak)>
+<!ELEMENT idopont (nap,tol,ig)>
+<!ATTLIST ora id ID #REQUIRED>
+<!ATTLIST ora tipus (Elmelet|Gyakorlat) #REQUIRED>
+<!ELEMENT targy (#PCDATA)>
+<!ELEMENT helyszin (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+<!ELEMENT nap (#PCDATA)>
+<!ELEMENT tol (#PCDATA)>
+<!ELEMENT ig (#PCDATA)>
