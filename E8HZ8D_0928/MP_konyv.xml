@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE konyvek SYSTEM "./MP_konyv.dtd">
+<konyvek>
+    <konyv id="info_konyv_1">
+        <cim>
+            Gyors kontextusalapu tervezes
+        </cim>
+        <kiadasiEv>
+            2010
+        </kiadasiEv>
+        <kiado>
+            Akademia Kiado
+        </kiado>
+        <szerzok>
+            <szerzo>
+                Karen Holtzblatt
+            </szerzo>
+            <szerzo>
+                Jessamny Burns Wendell
+            </szerzo>
+        </szerzok>
+        <absztrakt>
+            A felhasználó-központú tervezés technikájának gyakorlati kalauza.
+        </absztrakt>
+    </konyv>
+    <konyv id="info_konyv_2">
+        <cim>
+            Formalis modszerek az informatikaban
+        </cim>
+        <kiadasiEv>
+            2006
+        </kiadasiEv>
+        <kiado>
+            Typotex Kiado
+        </kiado>
+        <szerzok>
+            <szerzo>
+                Pataricza Andras
+            </szerzo>
+        </szerzok>
+    </konyv>
+    <konyv id="info_konyv_3">
+        <cim>
+            Beginning Joomla
+        </cim>
+        <kiadasiEv>
+            2009
+        </kiadasiEv>
+        <kiado>
+            Oskola Antikvarium
+        </kiado>
+        <szerzok>
+            <szerzo>
+                Dan Rahmel
+            </szerzo>
+        </szerzok>
+    </konyv>    
+</konyvek>
