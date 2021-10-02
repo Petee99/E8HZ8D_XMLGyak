@@ -1,0 +1,5 @@
+<!ELEMENT adatbazis (dolgozo+)>
+<!ELEMENT dolgozo (#PCDATA)>
+<!ATTLIST dolgozo kod ID #REQUIRED>
+<!ATTLIST dolgozo nev CDATA #REQUIRED>
+<!ATTLIST dolgozo fizetes CDATA #REQUIRED>

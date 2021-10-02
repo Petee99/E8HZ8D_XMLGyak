@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE adatbazis SYSTEM "./MP_adatbazis.dtd">
+<adatbazis>
+    <dolgozo kod="d01" nev="Kukucska Ferko" fizetes="200000"></dolgozo>
+    <dolgozo kod="d02" nev="Gomboc Artur" fizetes="150000"></dolgozo>
+    <dolgozo kod="d03" nev="Turo Rudolf" fizetes="400000"></dolgozo>
+</adatbazis>
