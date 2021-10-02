@@ -1,0 +1,12 @@
+<!ELEMENT er (cap_a+,cap_b+)>
+<!ELEMENT cap_b (cap_c+)>
+<!ELEMENT cap_a (#PCDATA)>
+<!ELEMENT cap_c (#PCDATA)>
+<!ATTLIST cap_a a ID #REQUIRED>
+<!ATTLIST cap_a b (x|y) #IMPLIED>
+<!ATTLIST cap_a c (d|e) #REQUIRED>
+<!ATTLIST cap_b a ID #REQUIRED>
+<!ATTLIST cap_b b (x|y) #REQUIRED>
+<!ATTLIST cap_c a ID #REQUIRED>
+<!ATTLIST cap_c b CDATA #REQUIRED>
+<!ATTLIST er c CDATA #REQUIRED>
