@@ -9,23 +9,23 @@
                         <xs:sequence>
                             <xs:element name="rendezo" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="id" type="xs:int" use="required"/>
                                     <xs:attribute name="nev" type="xs:string" use="required"/>
                                 </xs:complexType> 
                             </xs:element>
                             <xs:element name="szinesz" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="id" type="xs:int" use="required"/>
                                     <xs:attribute name="nev" type="xs:string" use="required"/>
                                 </xs:complexType> 
                             </xs:element>
                             <xs:element name="iro" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="id" type="xs:int" use="required"/>
                                 </xs:complexType> 
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="id" type="xs:int" use="required"/>
                         <xs:attribute name="mufaj" type="xs:string" use="required"/>
                     </xs:complexType>
                 </xs:element>                
