@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="xoy">
+        <xs:restriction base="xs:string">
+        <xs:enumeration value="x" />
+        <xs:enumeration value="y" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="doe">
+        <xs:restriction base="xs:string">
+        <xs:enumeration value="d" />
+        <xs:enumeration value="e" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="er">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cap_a" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="a" type="xs:string" use="required"/>
+                                    <xs:attribute name="b" type="xoy" use="optional"/>
+                                    <xs:attribute name="c" type="doe" use="required"/>
+                                </xs:complexType>
+                </xs:element> 
+                <xs:element name="cap_b" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cap_c" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="a" type="xs:string" use="required"/>
+                                    <xs:attribute name="b" type="xs:string" use="required"/>
+                                </xs:complexType> 
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="a" type="xs:string" use="required"/>
+                        <xs:attribute name="b" type="xoy" use="required"/>
+                    </xs:complexType>
+                </xs:element>                       
+            </xs:sequence>
+            <xs:attribute name="c" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
