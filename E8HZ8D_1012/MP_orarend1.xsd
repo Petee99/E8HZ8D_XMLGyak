@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:complexType name="orareendTipus">
+        <xs:sequence>
+            <xs:element name="ora" type="oraTipus" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+        
+    <xs:complexType name="oraTipus">
+        <xs:sequence>
+            <xs:element name="targy" type="targyTipus"/>
+            <xs:element name="idopont" type="idopontTipus"/>
+            <xs:element name="helyszin" type="helyszinTipus"/>
+            <xs:element name="oktato" type="oktatoTipus"/>
+            <xs:element name="szak" type="szakTipus"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="forma" type="formaTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="formaTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Elmelet" />
+            <xs:enumeration value="Gyakorlat" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="targyTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:complexType name="idopontTipus">
+        <xs:sequence>
+            <xs:element name="nap" type="napTipus"/>
+            <xs:element name="tol" type="tolTipus"/>
+            <xs:element name="ig" type="igTipus"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="napTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hetfo" />
+            <xs:enumeration value="Kedd" />
+            <xs:enumeration value="Szerda" />
+            <xs:enumeration value="Csutortok" />
+            <xs:enumeration value="Pentek" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tolTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="igTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    
+    <xs:simpleType name="helyszinTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="oktatoTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="szakTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:element name="orarend" type="orareendTipus" />
+</xs:schema>
