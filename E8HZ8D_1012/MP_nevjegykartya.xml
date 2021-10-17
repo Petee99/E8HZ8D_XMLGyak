@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<nevjegykartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./MP_nevjegykartya.xsd">
+    <nevjegykartya>
+        <nev>Mako Peter</nev>
+        <ceg>
+            <nev>Bosch Power Tool Kft.</nev>
+            <cim>
+                <iranyitoszam>3526</iranyitoszam>
+                <varos>Miskolc</varos>
+                <utca>Robert Bosch park</utca>
+                <hazszam>1</hazszam>
+            </cim>
+            <telefonszam>0618799889</telefonszam>
+            <weblap>bosch.hu</weblap>
+        </ceg>
+        <beosztas>Gyakornok</beosztas>
+        <telefonszam>06706127723</telefonszam>
+        <email>peter.mako99@gmail.com</email>
+    </nevjegykartya>
+    <nevjegykartya>
+        <nev>Kukucska Ferenc</nev>
+        <ceg>
+            <nev>Kukucska Bt.</nev>
+            <cim>
+                <iranyitoszam>3242</iranyitoszam>
+                <varos>Paradsasvar</varos>
+                <utca>Kossuth Lajos Ut</utca>
+                <hazszam>24</hazszam>
+            </cim>
+            <telefonszam>06702232211</telefonszam>
+            <weblap>kukucska.hu</weblap>
+        </ceg>
+        <beosztas>Ugyvezeto</beosztas>
+        <telefonszam>06709832671</telefonszam>
+        <email>k.ferenc78@gmail.com</email>
+    </nevjegykartya>
+</nevjegykartyak>

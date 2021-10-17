@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:complexType name="nevjegykartyakTipus">
+        <xs:sequence>
+            <xs:element name="nevjegykartya" type="nevjegykartyaTipus" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+        
+    <xs:complexType name="nevjegykartyaTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="ceg" type="cegTipus"/>
+            <xs:element name="beosztas" type="beosztasTipus"/>
+            <xs:element name="telefonszam" type="telefonszamTipus"/>
+            <xs:element name="email" type="emailTipus"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="nevTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    
+    <xs:complexType name="cegTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="cim" type="cimTipus"/>
+            <xs:element name="telefonszam" type="telefonszamTipus"/>
+            <xs:element name="weblap" type="weblapTipus"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cimTipus">
+        <xs:sequence>
+            <xs:element name="iranyitoszam" type="iranyitoszamTipus"/>
+            <xs:element name="varos" type="varosTipus"/>
+            <xs:element name="utca" type="utcaTipus"/>
+            <xs:element name="hazszam" type="hazszamTipus"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="beosztasTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonszamTipus">
+        <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+
+    <xs:simpleType name="emailTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="weblapTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="iranyitoszamTipus">
+        <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+
+    <xs:simpleType name="varosTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="utcaTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="hazszamTipus">
+        <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+
+    <xs:element name="nevjegykartyak" type="nevjegykartyakTipus" />
+</xs:schema>

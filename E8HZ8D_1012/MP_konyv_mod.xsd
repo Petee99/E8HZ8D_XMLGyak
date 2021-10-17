@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="isbnTipus">
+        <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+
+    <xs:simpleType name="cimTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="szerzoTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="nevTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="baratjaTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="szuletettTipus">
+        <xs:restriction base="xs:date" />
+    </xs:simpleType>
+
+    <xs:simpleType name="jellemzesTipus">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:complexType name="konyvekTipus">
+        <xs:sequence>
+            <xs:element name="konyv" type="konyvTipus" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+        
+    <xs:complexType name="konyvTipus">
+        <xs:sequence>
+            <xs:element name="cim" type="cimTipus"/>
+            <xs:element name="szerzo" type="szerzoTipus"/>
+            <xs:element name="szereplo" type="szereploTipus" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="isbn" type="isbnTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="szereploTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="baratja" type="baratjaTipus"/>
+            <xs:element name="szuletett" type="szuletettTipus"/>
+            <xs:element name="jellemzes" type="jellemzesTipus"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="konyvek" type="konyvekTipus" />
+</xs:schema>

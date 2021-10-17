@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<konyvek xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./MP_konyv1.xsd">
+    <konyv isbn="9789634158516">
+        <cim>Micimackó</cim>
+        <szerzo>A. A. Milne</szerzo>
+        <szereplo>
+            <nev>Micimackó</nev>
+            <baratja>Róbert Gida</baratja>
+            <szuletett>1906-10-16</szuletett>
+            <jellemzes>Micimackó, aki Medveczky Medve, M. B. (Malacka Barátja), Ny. B. (Nyuszi Barátja), É. S. F. (Északi-sark Felfedezője), F. F. F. (Füles Farkának Felfedezője) és ugyanennek megvigasztalója néven is ismert, egy szerény „csekélyértelmű medvebocs”, aki igen szeret verseket költeni és mézet enni. Legjobb barátja egy Malacka nevű malacka, aki nem különösebben bátor.</jellemzes>
+        </szereplo>
+        <szereplo>
+            <nev>Malacka</nev>
+            <baratja>Micimackó</baratja>
+            <szuletett>1907-08-22</szuletett>
+            <jellemzes> Általánosságban félénk, különösen fél a sötétben és sok mindenért hajlamos aggódni. Jóllehet igen kicsi állat (csak Zsebibaba kisebb nála) és néha dadog, igyekszik bátor lenni, gyakran sikerül is legyőzni a félelmeit.</jellemzes>
+        </szereplo>
+    </konyv>
+</konyvek>
