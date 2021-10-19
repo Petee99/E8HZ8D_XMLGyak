@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<szemelyek xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./szemelyekE8HZ8D.xsd">
+    <szemely id="sz1">
+        <nev>Makó Péter</nev>
+        <kor>22</kor>
+        <varos>Miskolc</varos>
+    </szemely>
+    <szemely id="sz2">
+        <nev>Kukucska Ferenc</nev>
+        <kor>21</kor>
+        <varos>Miskolc</varos>
+    </szemely>
+    <szemely id="sz3">
+        <nev>Tóth Ádám</nev>
+        <kor>20</kor>
+        <varos>Miskolc</varos>
+    </szemely>
+</szemelyek>
