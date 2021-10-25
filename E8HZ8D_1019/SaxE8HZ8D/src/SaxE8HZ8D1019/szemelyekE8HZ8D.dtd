@@ -1,0 +1,7 @@
+<!ELEMENT szemelyek (szemely+)>
+<!ELEMENT szemely (nev, kor, varos)>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT kor (#PCDATA)>
+<!ELEMENT varos (#PCDATA)>
+
+<!ATTLIST dolgozo kod ID #REQUIRED>
