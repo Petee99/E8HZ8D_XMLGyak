@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./usersE8HZ8D.xsd">
+    <user id="1">
+        <firstname>Peter</firstname>
+        <lastname>Mako</lastname>
+        <profession>SW Engineer</profession>
+    </user>
+    <user id="2">
+        <firstname>Ross</firstname>
+        <lastname>Geller</lastname>
+        <profession>Paleontologist</profession>
+    </user>
+    <user id="3">
+        <firstname>Chandler</firstname>
+        <lastname>Bing</lastname>
+        <profession>Transponster</profession>
+    </user>
+    <user id="4">
+        <firstname>Joseph</firstname>
+        <lastname>Tribbiani</lastname>
+        <profession>Actor</profession>
+    </user>
+</users>
