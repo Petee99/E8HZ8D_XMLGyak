@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./hallgatokE8HZ8D.xsd">
+    <student id="01">
+        <keresztnev>Peter</keresztnev>
+        <vezeteknev>Mako</vezeteknev>
+        <becenev>Makedli</becenev>
+        <kor>22</kor>       
+    </student>
+    <student id="02">
+        <keresztnev>Kukucska</keresztnev>
+        <vezeteknev>Ferenc</vezeteknev>
+        <becenev>Ferko</becenev>
+        <kor>23</kor>       
+    </student>
+    <student id="03">
+        <keresztnev>Para</keresztnev>
+        <vezeteknev>Zita</vezeteknev>
+        <becenev>Zitus</becenev>
+        <kor>19</kor>       
+    </student>
+</class>
