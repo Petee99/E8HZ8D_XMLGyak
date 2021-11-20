@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "studentE8HZ8D.xsl"?> 
+
+<class>
+    <student id="01">
+        <keresztnev>Peter</keresztnev>
+        <vezeteknev>Mako</vezeteknev>
+        <becenev>Makedli</becenev>
+        <kor>22</kor>       
+    </student>
+    <student id="02">
+        <keresztnev>Kukucska</keresztnev>
+        <vezeteknev>Ferenc</vezeteknev>
+        <becenev>Ferko</becenev>
+        <kor>23</kor>       
+    </student>
+    <student id="03">
+        <keresztnev>Para</keresztnev>
+        <vezeteknev>Zita</vezeteknev>
+        <becenev>Zitus</becenev>
+        <kor>19</kor>       
+    </student>
+</class>
