@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beszallitasi_rendszer>
+    <beszallitok>
+        <beszallito adoszam="11111111-2-33" termekref="111222333">
+            <szallitasi_ido>3 nap</szallitasi_ido>
+            <szallitasi_dij>3000 Ft</szallitasi_dij>
+            <cegnev>SnowBoardStuff Bt.</cegnev>
+            <cim>
+                <zip>3535</zip>
+                <varos>Miskolc</varos>
+                <utca>Petofi ut</utca>
+                <hazszam>13</hazszam>
+            </cim>
+            <telefonszamok>
+                <telefonszam>06706027422</telefonszam>
+                <telefonszam>06306027422</telefonszam>
+            </telefonszamok>
+        </beszallito>
+        <beszallito adoszam="11111111-3-44" termekref="111222333">
+            <szallitasi_ido>2 nap</szallitasi_ido>
+            <szallitasi_dij>4000 Ft</szallitasi_dij>
+            <cegnev>Kerekgyarto es Tarsa Zrt.</cegnev>
+            <cim>
+                <zip>2344</zip>
+                <varos>Domsod</varos>
+                <utca>Kossuth Lajos utca</utca>
+                <hazszam>2</hazszam>
+            </cim>
+            <telefonszamok>
+                <telefonszam>06206662710</telefonszam>
+            </telefonszamok>
+        </beszallito>
+        <beszallito adoszam="11111111-2-33" termekref="111222444">
+            <szallitasi_ido>5 nap</szallitasi_ido>
+            <szallitasi_dij>1000 Ft</szallitasi_dij>
+            <cegnev></cegnev>
+            <cim>
+                <zip>3341</zip>
+                <varos>Szucs</varos>
+                <utca>Kiraly utca</utca>
+                <hazszam>54</hazszam>
+            </cim>
+            <telefonszamok>
+                <telefonszam>06708899112</telefonszam>
+            </telefonszamok>
+        </beszallito>
+    </beszallitok>
+    <snowboard_felszerelesek>
+        <snowboard_felszereles azonosito="111222333" beszallitoref="11111111-2-33">
+            <tipus>Deszka</tipus>
+            <marka>Nitro</marka>
+            <nev>Nitro Team 159</nev>
+            <keszlet>24</keszlet>
+            <szarmazasi_hely>Ausztria</szarmazasi_hely>
+        </snowboard_felszereles>
+        <snowboard_felszereles azonosito="" beszallitoref="">
+            <tipus>Bakancs</tipus>
+            <marka>Burton</marka>
+            <nev>Moto BOA</nev>
+            <keszlet>12</keszlet>
+        </snowboard_felszereles>
+        <snowboard_felszereles azonosito="" beszallitoref="">
+            <tipus>Kotes</tipus>
+            <marka>Ride</marka>
+            <nev>Rodeo</nev>
+            <keszlet>8</keszlet>
+            <szarmazasi_hely>USA</szarmazasi_hely>
+        </snowboard_felszereles>
+    </snowboard_felszerelesek>
+    <viszonteladok>
+        <viszontelado adoszam="" rendelesref="">
+            <cegnev>Snowboard Shop</cegnev>
+            <cim>
+                <zip>3508</zip>
+                <varos>Miskolc</varos>
+                <utca>Testvervarosok utja</utca>
+                <hazszam>22</hazszam>
+            </cim>
+            <telefonszamok>
+                <telefonszam>06706110100</telefonszam>
+                <telefonszam>06206110100</telefonszam>
+            </telefonszamok>
+        </viszontelado>
+        <viszontelado adoszam="" rendelesref="">
+            <cegnev>Snowboard Shop</cegnev>
+            <cim>
+                <zip>3508</zip>
+                <varos>Miskolc</varos>
+                <utca>Testvervarosok utja</utca>
+                <hazszam>22</hazszam>
+            </cim>
+            <telefonszamok>
+                <telefonszam>06706110100</telefonszam>
+                <telefonszam>06206110100</telefonszam>
+            </telefonszamok>
+        </viszontelado>
+        <viszontelado adoszam="" rendelesref="">
+            <cegnev>Snowboard Shop</cegnev>
+            <cim>
+                <zip>3508</zip>
+                <varos>Miskolc</varos>
+                <utca>Testvervarosok utja</utca>
+                <hazszam>22</hazszam>
+            </cim>
+            <telefonszamok>
+                <telefonszam>06706110100</telefonszam>
+                <telefonszam>06206110100</telefonszam>
+            </telefonszamok>
+        </viszontelado>
+    </viszonteladok>
+    <rendelesek>
+        <rendeles rendeles_id="" viszonteladoref="" termekref="">
+            <datum>2021-09-15</datum>
+            <mennyiseg>1</mennyiseg>
+        </rendeles>
+        <rendeles rendeles_id="" viszonteladoref="" termekref="">
+            <datum>2021-10-22</datum>
+            <mennyiseg>2</mennyiseg>
+        </rendeles>
+        <rendeles rendeles_id="" viszonteladoref="" termekref="">
+            <datum>2021-11-09</datum>
+            <mennyiseg>3</mennyiseg>
+        </rendeles>
+    </rendelesek>
+</beszallitasi_rendszer>
