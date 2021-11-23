@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beszallitasi_rendszer>
+<beszallitasi_rendszer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./XMLSchemaE8HZ8D.xsd">
     <beszallitok>
         <beszallito adoszam="11111111-2-33" termekref="111222333">
             <szallitasi_ido>3 nap</szallitasi_ido>
@@ -30,7 +30,7 @@
                 <telefonszam>06206662710</telefonszam>
             </telefonszamok>
         </beszallito>
-        <beszallito adoszam="11111111-2-33" termekref="111222444">
+        <beszallito adoszam="11111111-3-35" termekref="111222444">
             <szallitasi_ido>5 nap</szallitasi_ido>
             <szallitasi_dij>1000 Ft</szallitasi_dij>
             <cegnev></cegnev>
@@ -53,13 +53,13 @@
             <keszlet>24</keszlet>
             <szarmazasi_hely>Ausztria</szarmazasi_hely>
         </snowboard_felszereles>
-        <snowboard_felszereles azonosito="" beszallitoref="">
+        <snowboard_felszereles azonosito="111222444" beszallitoref="11111111-2-33">
             <tipus>Bakancs</tipus>
             <marka>Burton</marka>
             <nev>Moto BOA</nev>
             <keszlet>12</keszlet>
         </snowboard_felszereles>
-        <snowboard_felszereles azonosito="" beszallitoref="">
+        <snowboard_felszereles azonosito="111222555" beszallitoref="11111111-3-35">
             <tipus>Kotes</tipus>
             <marka>Ride</marka>
             <nev>Rodeo</nev>
@@ -68,7 +68,7 @@
         </snowboard_felszereles>
     </snowboard_felszerelesek>
     <viszonteladok>
-        <viszontelado adoszam="" rendelesref="">
+        <viszontelado adoszam="11111111-9-13">
             <cegnev>Snowboard Shop</cegnev>
             <cim>
                 <zip>3508</zip>
@@ -81,43 +81,41 @@
                 <telefonszam>06206110100</telefonszam>
             </telefonszamok>
         </viszontelado>
-        <viszontelado adoszam="" rendelesref="">
-            <cegnev>Snowboard Shop</cegnev>
+        <viszontelado adoszam="11112222-2-33">
+            <cegnev>Snowboards and CO.</cegnev>
             <cim>
-                <zip>3508</zip>
+                <zip>3521</zip>
                 <varos>Miskolc</varos>
-                <utca>Testvervarosok utja</utca>
-                <hazszam>22</hazszam>
+                <utca>Arpad ut</utca>
+                <hazszam>56</hazszam>
             </cim>
             <telefonszamok>
-                <telefonszam>06706110100</telefonszam>
-                <telefonszam>06206110100</telefonszam>
+                <telefonszam>06709856734</telefonszam>
             </telefonszamok>
         </viszontelado>
-        <viszontelado adoszam="" rendelesref="">
-            <cegnev>Snowboard Shop</cegnev>
+        <viszontelado adoszam="11113333-2-33">
+            <cegnev>SnowboardStuff</cegnev>
             <cim>
-                <zip>3508</zip>
+                <zip>3537</zip>
                 <varos>Miskolc</varos>
-                <utca>Testvervarosok utja</utca>
-                <hazszam>22</hazszam>
+                <utca>Szechenyi utca</utca>
+                <hazszam>10</hazszam>
             </cim>
             <telefonszamok>
-                <telefonszam>06706110100</telefonszam>
-                <telefonszam>06206110100</telefonszam>
+                <telefonszam>06208417632</telefonszam>
             </telefonszamok>
         </viszontelado>
     </viszonteladok>
     <rendelesek>
-        <rendeles rendeles_id="" viszonteladoref="" termekref="">
+        <rendeles rendeles_id="aaa111" viszonteladoref="11111111-9-13" termekref="111222333">
             <datum>2021-09-15</datum>
             <mennyiseg>1</mennyiseg>
         </rendeles>
-        <rendeles rendeles_id="" viszonteladoref="" termekref="">
+        <rendeles rendeles_id="aaa222" viszonteladoref="11112222-2-33" termekref="111222444">
             <datum>2021-10-22</datum>
             <mennyiseg>2</mennyiseg>
         </rendeles>
-        <rendeles rendeles_id="" viszonteladoref="" termekref="">
+        <rendeles rendeles_id="aaa333" viszonteladoref="11113333-2-33" termekref="111222555">
             <datum>2021-11-09</datum>
             <mennyiseg>3</mennyiseg>
         </rendeles>
