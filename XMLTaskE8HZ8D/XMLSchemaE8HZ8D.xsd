@@ -1,110 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="beszallitasi_rendszer">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="beszallitok">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="beszallito">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="szallitasi_ido" type="xs:string" />
-                    <xs:element name="szallitasi_dij" type="xs:string" />
-                    <xs:element name="cegnev" type="xs:string" />
-                    <xs:element name="cim">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="zip" type="xs:unsignedShort" />
-                          <xs:element name="varos" type="xs:string" />
-                          <xs:element name="utca" type="xs:string" />
-                          <xs:element name="hazszam" type="xs:unsignedByte" />
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element name="telefonszamok">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element maxOccurs="unbounded" name="telefonszam" type="xs:unsignedLong" />
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="adoszam" type="xs:string" use="required" />
-                  <xs:attribute name="termekref" type="xs:unsignedInt" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="snowboard_felszerelesek">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="snowboard_felszereles">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="tipus" type="xs:string" />
-                    <xs:element name="marka" type="xs:string" />
-                    <xs:element name="nev" type="xs:string" />
-                    <xs:element name="keszlet" type="xs:unsignedByte" />
-                    <xs:element minOccurs="0" name="szarmazasi_hely" type="xs:string" />
-                  </xs:sequence>
-                  <xs:attribute name="azonosito" type="xs:unsignedInt" use="required" />
-                  <xs:attribute name="beszallitoref" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="viszonteladok">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="viszontelado">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="cegnev" type="xs:string" />
-                    <xs:element name="cim">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="zip" type="xs:unsignedShort" />
-                          <xs:element name="varos" type="xs:string" />
-                          <xs:element name="utca" type="xs:string" />
-                          <xs:element name="hazszam" type="xs:unsignedByte" />
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element name="telefonszamok">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element maxOccurs="unbounded" name="telefonszam" type="xs:unsignedLong" />
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="adoszam" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="rendelesek">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="rendeles">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="datum" type="xs:date" />
-                    <xs:element name="mennyiseg" type="xs:unsignedByte" />
-                  </xs:sequence>
-                  <xs:attribute name="rendeles_id" type="xs:string" use="required" />
-                  <xs:attribute name="viszonteladoref" type="xs:string" use="required" />
-                  <xs:attribute name="termekref" type="xs:unsignedInt" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
+
+    <xs:element name="beszallitasi_rendszer" type="beszallitasi_rendszerTipus" />
+
+    <xs:complexType name="beszallitasi_rendszerTipus">
+        <xs:sequence>
+            <xs:element name="beszallitok" type="beszallitokTipus" maxOccurs="1" />
+            <xs:element name="snowboard_felszerelesek" type="snowboard_felszerelesekTipus" maxOccurs="1" />
+            <xs:element name="viszonteladok" type="viszonteladokTipus" maxOccurs="1" />
+            <xs:element name="rendelesek" type="rendelesekTipus" maxOccurs="1" />
+        </xs:sequence>
     </xs:complexType>
-  </xs:element>
+
+    <xs:complexType name="beszallitokTipus">
+        <xs:sequence>
+            <xs:element name="beszallito" type="beszallitoTipus" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="snowboard_felszerelesekTipus">
+        <xs:sequence>
+            <xs:element name="snowboard_felszereles" type="snowboard_felszerelesTipus" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="viszonteladokTipus">
+        <xs:sequence>
+            <xs:element name="viszontelado" type="viszonteladoTipus" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rendelesekTipus">
+        <xs:sequence>
+            <xs:element name="rendeles" type="rendelesTipus" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="beszallitoTipus">
+        <xs:sequence>
+            <xs:element name="szallitasi_ido" type="xs:string" />
+            <xs:element name="szallitasi_dij" type="xs:string" />
+            <xs:element name="cegnev" type="xs:string" />
+            <xs:element name="cim" type="cimTipus" />
+            <xs:element name="telefonszamok" type="telefonszamokTipus" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="adoszam" type="adoszamTipus" use="required" />
+        <xs:attribute name="termekref" type="azonositoTipus" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="snowboard_felszerelesTipus">
+        <xs:sequence>
+            <xs:element name="tipus" type="xs:string" />
+            <xs:element name="marka" type="xs:string" />
+            <xs:element name="nev" type="xs:string" />
+            <xs:element name="keszlet" type="xs:unsignedByte" />
+            <xs:element minOccurs="0" name="szarmazasi_hely" type="xs:string" />            
+        </xs:sequence>
+        <xs:attribute name="azonosito" type="azonositoTipus" use="required" />
+        <xs:attribute name="beszallitoref" type="adoszamTipus" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="viszonteladoTipus">
+        <xs:sequence>
+            <xs:element name="cegnev" type="xs:string" />
+            <xs:element name="cim" type="cimTipus" />
+            <xs:element name="telefonszamok" maxOccurs="1" type="telefonszamokTipus" />
+        </xs:sequence>
+        <xs:attribute name="adoszam" type="adoszamTipus" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="rendelesTipus">
+        <xs:sequence>
+            <xs:element name="datum" type="xs:date" />
+            <xs:element name="mennyiseg" type="xs:unsignedByte" />
+        </xs:sequence>
+        <xs:attribute name="rendeles_id" type="idTipus" use="required" />
+        <xs:attribute name="viszonteladoref" type="adoszamTipus" use="required" />
+        <xs:attribute name="termekref" type="azonositoTipus" use="required" />
+    </xs:complexType>
+
+    <xs:simpleType name="adoszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{8}[-]{1}[0-9]{1}[-]{1}[0-9]{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="azonositoTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{3}[0-9]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="cimTipus">
+        <xs:sequence>
+            <xs:element name="zip" type="zipTipus" />
+            <xs:element name="varos" type="xs:string" />
+            <xs:element name="utca" type="xs:string" />
+            <xs:element name="hazszam" type="hazszamTipus" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="zipTipus">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1000" />
+            <xs:maxInclusive value="9999" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="hazszamTipus">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="telefonszamokTipus">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="telefonszam" type="telefonszamTipus" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="telefonszamTipus">
+        <xs:restriction base="xs:unsignedLong">
+            <xs:pattern value="[0-9]{11}" />
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>
