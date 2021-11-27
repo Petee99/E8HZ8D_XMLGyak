@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beszallitasi_rendszer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./XMLSchemaE8HZ8D.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beszallitasi_rendszer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./XMLSchemaE8HZ8D.xsd">
     
     <beszallito adoszam="11111111-2-33">
         <cegnev>SnowBoardStuff Bt.</cegnev>
@@ -94,23 +93,23 @@
     <viszontelado adoszam="11113333-2-33">
         <cegnev>SnowboardStuff</cegnev>
         <cim>
-            <zip>3537</zip>
+            <zip>3522</zip>
             <varos>Miskolc</varos>
-            <utca>Szechenyi utca</utca>
-            <hazszam>10</hazszam>
+            <utca>Karolyi utca</utca>
+            <hazszam>35</hazszam>
         </cim>
         <telefonszam>06208417632</telefonszam>
     </viszontelado>
 
-    <rendeles rendeles_id="aaa111" viszontelado="11111111-9-13" termek="111222333">
+    <rendeles rendeles_id="aaa111" termek="111222555" viszontelado="11111111-9-13">
         <datum>2021-09-15</datum>
-        <mennyiseg>1</mennyiseg>
+        <mennyiseg>2</mennyiseg>
     </rendeles>
-    <rendeles rendeles_id="aaa222" viszontelado="11112222-2-33" termek="111222444">
+    <rendeles rendeles_id="aaa222" termek="111222444" viszontelado="11112222-2-33">
         <datum>2021-10-22</datum>
         <mennyiseg>2</mennyiseg>
     </rendeles>
-    <rendeles rendeles_id="aaa333" viszontelado="11113333-2-33" termek="111222555">
+    <rendeles rendeles_id="aaa333" termek="111222555" viszontelado="11113333-2-33">
         <datum>2021-11-09</datum>
         <mennyiseg>3</mennyiseg>
     </rendeles>

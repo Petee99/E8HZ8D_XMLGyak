@@ -1,5 +1,172 @@
 package hu.domparse.e8hz8d;
 
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+import java.io.File;
+
 public class DOMQueryE8HZ8D {
 
+	public static void main(String argv[]) {
+
+		try {
+			File inputFile = new File("../XMLE8HZ8D.xml");
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(inputFile);
+			doc.getDocumentElement().normalize();
+			System.out.println("-----------------------------------------------------------------------------------");
+
+			NodeList equipments = doc.getElementsByTagName("snowboard_felszereles");
+			NodeList suppliers = doc.getElementsByTagName("beszallito");
+			NodeList deliveries = doc.getElementsByTagName("szallitja"); 
+			NodeList orders = doc.getElementsByTagName("rendeles");
+			NodeList resellers = doc.getElementsByTagName("viszontelado");
+
+			//Query no.1: Termékekhez tartozó beszállítók
+			System.out.println("Termékekhez tartozó beszállítók:\n");
+
+			for (int eIndex = 0; eIndex < equipments.getLength(); eIndex++) {
+				Node equipment = equipments.item(eIndex);
+
+				if (equipment.getNodeType() == Node.ELEMENT_NODE) {
+					Element eElement = (Element) equipment;
+					System.out.println("Felszerelés:\n " 
+							+ eElement
+							.getElementsByTagName("marka")
+							.item(0)
+							.getTextContent() + " "
+							+ eElement
+							.getElementsByTagName("nev")
+							.item(0)
+							.getTextContent() + ": ");
+
+					for (int dIndex = 0; dIndex < deliveries.getLength(); dIndex++) {
+						Node delivery = deliveries.item(dIndex);
+
+						if (delivery.getNodeType() == Node.ELEMENT_NODE) {
+							Element dElement = (Element) delivery;
+
+							for (int sIndex = 0; sIndex < suppliers.getLength(); sIndex++) {
+								Node supplier = suppliers.item(sIndex);
+
+								if (supplier.getNodeType() == Node.ELEMENT_NODE) {
+									Element sElement = (Element) supplier; 
+
+									if (eElement.getAttribute("azonosito").equals(dElement.getAttribute("termek")) &&
+											sElement.getAttribute("adoszam").equals(dElement.getAttribute("beszallito"))) {
+
+										System.out.println(" -> Beszállító: " 
+												+ sElement
+												.getElementsByTagName("cegnev")
+												.item(0)
+												.getTextContent()
+												+ "\n");
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			//Query no.2: 60 ezer forintnál olcsóbb termékek
+			System.out.println("-----------------------------------------------------------------------------------");
+			System.out.println("60 ezer forintnál olcsóbb termékek:\n");
+
+			for (int eIndex = 0; eIndex < equipments.getLength(); eIndex++) {
+				Node equipment = equipments.item(eIndex);
+
+				if (equipment.getNodeType() == Node.ELEMENT_NODE) {
+					Element eElement = (Element) equipment;
+
+					if (Double.valueOf(eElement.getElementsByTagName("ar").item(0).getTextContent())<60000) {
+						System.out.println("Felszerelés:\n " 
+								+ eElement
+								.getElementsByTagName("marka")
+								.item(0)
+								.getTextContent() + " "
+								+ eElement
+								.getElementsByTagName("nev")
+								.item(0)
+								.getTextContent() + ": ");
+						System.out.println("Ár:\n " 
+								+ eElement
+								.getElementsByTagName("ar")
+								.item(0)
+								.getTextContent()
+								+ "\n");
+					}
+				}
+			}	         
+
+			//Query no.3: 60 ezer forintnál drágább rendelésekhez tartozó viszonteladó és termék(ek)
+			System.out.println("-----------------------------------------------------------------------------------");
+			System.out.println("60 ezer forintnál drágább rendelésekhez tartozó viszonteladó és termék(ek):\n");
+
+			for (int oIndex = 0; oIndex < orders.getLength(); oIndex++) {
+				Node order = orders.item(oIndex);
+
+				if (order.getNodeType() == Node.ELEMENT_NODE) {
+					Element oElement = (Element) order;
+
+					for (int eIndex = 0; eIndex < equipments.getLength(); eIndex++) {
+						Node equipment = equipments.item(eIndex);
+
+						if (equipment.getNodeType() == Node.ELEMENT_NODE) {
+							Element eElement = (Element) equipment;
+
+							for (int rIndex = 0; rIndex < resellers.getLength(); rIndex++) {
+								Node reseller = resellers.item(rIndex);
+
+								if (reseller.getNodeType() == Node.ELEMENT_NODE) {
+									Element rElement = (Element) reseller;
+
+									if (oElement.getAttribute("termek").equals(eElement.getAttribute("azonosito")) &&
+											oElement.getAttribute("viszontelado").equals(rElement.getAttribute("adoszam"))) {
+
+										double  oSize = Double.valueOf(oElement.getElementsByTagName("mennyiseg").item(0).getTextContent());
+										double ePrice = Double.valueOf(eElement.getElementsByTagName("ar").item(0).getTextContent());
+
+										if (ePrice * oSize > 60000) {
+											System.out.println("Rendelés (no. "
+													+ oElement
+													.getAttribute("rendeles_id")
+													+ ") ("
+													+ ePrice*oSize 
+													+" Ft)");
+											System.out.println(" -> Viszonteladó: " 
+													+ rElement
+													.getElementsByTagName("cegnev")
+													.item(0)
+													.getTextContent());
+											System.out.println(" -> Felszerelés: " 
+													+ oElement
+													.getElementsByTagName("mennyiseg")
+													.item(0)
+													.getTextContent() + "x "
+													+ eElement
+													.getElementsByTagName("marka")
+													.item(0)
+													.getTextContent() + " "
+													+ eElement
+													.getElementsByTagName("nev")
+													.item(0)
+													.getTextContent()
+													+ "\n");
+										}
+									}
+								}	                  
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
