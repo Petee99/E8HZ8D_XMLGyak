@@ -5,47 +5,30 @@
 
     <xs:complexType name="beszallitasi_rendszerTipus">
         <xs:sequence>
-            <xs:element name="beszallitok" type="beszallitokTipus" maxOccurs="1" />
-            <xs:element name="snowboard_felszerelesek" type="snowboard_felszerelesekTipus" maxOccurs="1" />
-            <xs:element name="viszonteladok" type="viszonteladokTipus" maxOccurs="1" />
-            <xs:element name="rendelesek" type="rendelesekTipus" maxOccurs="1" />
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="beszallitokTipus">
-        <xs:sequence>
             <xs:element name="beszallito" type="beszallitoTipus" maxOccurs="unbounded" />
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="snowboard_felszerelesekTipus">
-        <xs:sequence>
+            <xs:element name="szallitja" type="szallitjaTipus" maxOccurs="unbounded" />
             <xs:element name="snowboard_felszereles" type="snowboard_felszerelesTipus" maxOccurs="unbounded" />
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="viszonteladokTipus">
-        <xs:sequence>
             <xs:element name="viszontelado" type="viszonteladoTipus" maxOccurs="unbounded" />
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="rendelesekTipus">
-        <xs:sequence>
             <xs:element name="rendeles" type="rendelesTipus" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="beszallitoTipus">
         <xs:sequence>
-            <xs:element name="szallitasi_ido" type="xs:string" />
-            <xs:element name="szallitasi_dij" type="xs:string" />
             <xs:element name="cegnev" type="xs:string" />
             <xs:element name="cim" type="cimTipus" />
-            <xs:element name="telefonszamok" type="telefonszamokTipus" maxOccurs="1" />
+            <xs:element name="telefonszam" type="telefonszamTipus" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="adoszam" type="adoszamTipus" use="required" />
-        <xs:attribute name="termekref" type="azonositoTipus" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="szallitjaTipus">
+        <xs:sequence>
+            <xs:element name="szallitasi_ido" type="xs:string" />
+            <xs:element name="szallitasi_dij" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="beszallito" type="adoszamTipus" use="required" />
+        <xs:attribute name="termek" type="azonositoTipus" use="required" />
     </xs:complexType>
 
     <xs:complexType name="snowboard_felszerelesTipus">
@@ -54,17 +37,17 @@
             <xs:element name="marka" type="xs:string" />
             <xs:element name="nev" type="xs:string" />
             <xs:element name="keszlet" type="xs:unsignedByte" />
-            <xs:element minOccurs="0" name="szarmazasi_hely" type="xs:string" />            
+            <xs:element minOccurs="0" name="szarmazasi_hely" type="xs:string" />
+            <xs:element name="ar" type="xs:integer" />            
         </xs:sequence>
         <xs:attribute name="azonosito" type="azonositoTipus" use="required" />
-        <xs:attribute name="beszallitoref" type="adoszamTipus" use="required" />
     </xs:complexType>
 
     <xs:complexType name="viszonteladoTipus">
         <xs:sequence>
             <xs:element name="cegnev" type="xs:string" />
             <xs:element name="cim" type="cimTipus" />
-            <xs:element name="telefonszamok" maxOccurs="1" type="telefonszamokTipus" />
+            <xs:element name="telefonszam" type="telefonszamTipus" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="adoszam" type="adoszamTipus" use="required" />
     </xs:complexType>
@@ -72,11 +55,11 @@
     <xs:complexType name="rendelesTipus">
         <xs:sequence>
             <xs:element name="datum" type="xs:date" />
-            <xs:element name="mennyiseg" type="xs:unsignedByte" />
+            <xs:element name="mennyiseg" type="xs:integer" />
         </xs:sequence>
         <xs:attribute name="rendeles_id" type="idTipus" use="required" />
-        <xs:attribute name="viszonteladoref" type="adoszamTipus" use="required" />
-        <xs:attribute name="termekref" type="azonositoTipus" use="required" />
+        <xs:attribute name="viszontelado" type="adoszamTipus" use="required" />
+        <xs:attribute name="termek" type="azonositoTipus" use="required" />
     </xs:complexType>
 
     <xs:simpleType name="adoszamTipus">
@@ -118,12 +101,6 @@
             <xs:minInclusive value="1" />
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:complexType name="telefonszamokTipus">
-        <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="telefonszam" type="telefonszamTipus" />
-        </xs:sequence>
-    </xs:complexType>
 
     <xs:simpleType name="telefonszamTipus">
         <xs:restriction base="xs:unsignedLong">
