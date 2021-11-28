@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h2>Rendszamok arak szerint rendezve</h2>
+        <ul>
+            <li>
+                Rendszam: ABC-100
+                <br>
+                Ar: 21233
+            </li>
+            <li>
+                Rendszam: ABC-103
+                <br>
+                Ar: 21233
+            </li>
+            <li>
+                Rendszam: ABC-102
+                <br>
+                Ar: 31233
+            </li>
+            <li>
+                Rendszam: ABC-101
+                <br>
+                Ar: 44233
+            </li>
+        </ul>
+    </body>
+</html>

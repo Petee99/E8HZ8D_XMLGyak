@@ -16,6 +16,7 @@ xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
                   <th>Vezeteknev</th> 
                   <th>Becenev</th> 
                   <th>Kor</th>
+                  <th>Fizetes</th>
                   <th>Fokozat</th>
                </tr> 
 				
@@ -28,12 +29,13 @@ xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
                      <td><xsl:value-of select = "keresztnev"/></td> 
                      <td><xsl:value-of select = "vezeteknev"/></td> 
                      <td><xsl:value-of select = "becenev"/></td> 
-                     <td><xsl:value-of select = "kor"/></td> 
+                     <td><xsl:value-of select = "kor"/></td>
+                     <td><xsl:value-of select = "fizetes"/></td>
                      <xsl:choose>
-                        <xsl:when test="fizetes&ge;'60000'">
+                        <xsl:when test="fizetes>=600000">
                            <td>Magas</td>
                         </xsl:when>
-                        <xsl:when test="fizetes&ge;'50000'">
+                        <xsl:when test="fizetes>=500000">
                            <td>Kozepes</td>
                         </xsl:when>
                         <xsl:otherwise>

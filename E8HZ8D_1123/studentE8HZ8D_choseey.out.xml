@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h2>Students</h2>
+        <table border="1">
+            <tr bgcolor="#9acd32">
+                <th>ID</th><th>Keresztnev</th><th>Vezeteknev</th><th>Becenev</th><th>Kor</th><th>Fizetes</th><th>Fokozat</th>
+            </tr>
+            <tr>
+                <td>01</td><td>Peter</td><td>Mako</td><td>Makedli</td><td>22</td><td>600000</td><td>Magas</td>
+            </tr>
+            <tr>
+                <td>02</td><td>Ferenc</td><td>Kukucska</td><td>Ferko</td><td>23</td><td>500000</td><td>Kozepes</td>
+            </tr>
+            <tr>
+                <td>03</td><td>Zita</td><td>Para</td><td>Zitus</td><td>19</td><td>400000</td><td>Alacsony</td>
+            </tr>
+        </table>
+    </body>
+</html>
