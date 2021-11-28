@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h2>Varosonkenti autok darabszama es osszara</h2>
+        <ul>
+            <li>
+                Varos: Eger
+                <br>
+                				        Darab: 1
+                <br>
+                				        Osszar: 21233
+            </li>
+            <li>
+                Varos: Miskolc
+                <br>
+                				        Darab: 3
+                <br>
+                				        Osszar: 96699
+            </li>
+        </ul>
+    </body>
+</html>

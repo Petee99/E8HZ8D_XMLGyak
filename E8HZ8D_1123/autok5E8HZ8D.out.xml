@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h2>Tipusok darabszama csokkeno sorrendben</h2>
+        <ul>
+            <li>
+                Tipus: Opel
+                <br>
+                				        Darab: 2
+            </li>
+            <li>
+                Tipus: Fiat
+                <br>
+                				        Darab: 1
+            </li>
+            <li>
+                Tipus: Skoda
+                <br>
+                				        Darab: 1
+            </li>
+        </ul>
+    </body>
+</html>
