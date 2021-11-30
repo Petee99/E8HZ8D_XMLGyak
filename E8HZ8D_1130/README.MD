@@ -1,0 +1,1 @@
+Az 1. feladat már el vna készítve az előző órai anyag mappájában.
