@@ -5,13 +5,21 @@
 </head>
 <body>
 
-<h1>JSON megvalósítása - JavaScript</h1>
-<p id="jsonContent"></p>
+<h3>JSON megvalósítása - JavaScript</h3>
+<b id="jsonContent"></b>
 
 <script>
-    fetch('JSONE8HZ8D.json')
-    .then(response => response.json())
-    .then(jsonResponse => console.log(jsonResponse))   
+    let text = '{"book": ['+
+    '{"author": "Nyékyné Dr. Gaizler Judit","language": "Java 2 I-II. - Útikalauz programozóknak 5.0"},' +
+    '{"author": "Reiter István","language": "C# programozás lépésről lépésre"} ]}';
+
+    let jsonData = JSON.parse(text);
+
+    for(let entry of jsonData.book){
+        document.getElementById("jsonContent").innerHTML+= "Language: "+entry.language + "<br>" +
+            "Author: "+entry.author + "<br>";    
+    }
+
 </script>
 
 </body>
