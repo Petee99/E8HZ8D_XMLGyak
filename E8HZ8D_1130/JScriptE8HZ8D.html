@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON</title>
+</head>
+<body>
+
+<h1>JSON megvalósítása - JavaScript</h1>
+<p id="jsonContent"></p>
+
+<script>
+    fetch('JSONE8HZ8D.json')
+    .then(response => response.json())
+    .then(jsonResponse => console.log(jsonResponse))   
+</script>
+
+</body>
+</html>
