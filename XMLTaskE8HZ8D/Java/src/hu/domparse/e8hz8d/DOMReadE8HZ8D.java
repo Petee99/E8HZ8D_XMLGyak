@@ -1,3 +1,8 @@
+/*
+ * Ez a DOM olvasó program egy adott XML fájlon fog tudni végigmenni, és kiírni az xml dokumentum fa szerkezetu tartalmát.
+ * A programot egy rekurzív függvény megírásával kiviteleztem, amely minden gyerekelemet és attribútumot megkeres, majd továbblép a következo elemre.
+ */
+
 package hu.domparse.e8hz8d;
 
 import java.io.File;
@@ -11,7 +16,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 
-//This class goes through any xml file using a recursive function. Idea and implementation exclusively by: Peter Mako, E8HZ8D.
 public class DOMReadE8HZ8D {
 
 	public static void main (String[] args) {

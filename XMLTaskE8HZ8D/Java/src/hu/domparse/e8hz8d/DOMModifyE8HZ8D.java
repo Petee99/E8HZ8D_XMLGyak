@@ -1,3 +1,11 @@
+/*
+ * Ez a DOM változtató program az adott XMLE8HZ8D.xml fájlon fog tudni végigmenni 
+ * és megváltoztatni bizonyos adatokat, amennyiben ezek a változtatások szükségesek. 
+ * 2 adat változtatása került megírásra:
+ * 1) SnowboardStuff viszonteladó címváltozása 
+ * 2) Snowboard Shop "aaa111" rendelésének változtatása, 2 db Ride Rodeo kötésre 
+ */
+
 package hu.domparse.e8hz8d;
 
 import java.io.File;
@@ -87,10 +95,6 @@ public class DOMModifyE8HZ8D {
 												
 												oElement.setAttribute("termek", eElement.getAttribute("azonosito"));
 												oElement.getElementsByTagName("mennyiseg").item(0).setTextContent("2");
-											}
-
-											if(eElement.getAttribute("azonosito").equals((oElement).getAttribute("termek"))) {
-
 											}
 										}
 									}

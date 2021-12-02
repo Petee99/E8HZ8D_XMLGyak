@@ -1,3 +1,10 @@
+/*
+ * Ez a DOM lekérdezo program az adott XMLE8HZ8D.xml fájlon fog tudni végigmenni, és különbözo lekérdezéseket végezni rajta, nevezetesen 3mat:
+ * 1) Termékekhez tartozó beszállítók
+ * 2) 60 ezer forintnál olcsóbb termékek
+ * 3) 60 ezer forintnál drágább rendelésekhez tartozó viszonteladó és termék(ek)
+ */
+
 package hu.domparse.e8hz8d;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -31,7 +38,7 @@ public class DOMQueryE8HZ8D {
 
 			for (int eIndex = 0; eIndex < equipments.getLength(); eIndex++) {
 				Node equipment = equipments.item(eIndex);
-
+				
 				if (equipment.getNodeType() == Node.ELEMENT_NODE) {
 					Element eElement = (Element) equipment;
 					System.out.println("Felszerelés:\n " 
